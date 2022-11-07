@@ -19,3 +19,5 @@ python3 BigBrainalyzer.py <path to directory of samples>
 Samples must be unzipped. The final step of BigBrainalyzer zips the malware with the password `infected`.
 
 There's very little error handling or comments, and the code is a mess, so good luck. Feel free to make PRs, ping me on discord, steal some or all of this, whatever.
+
+And thank you [HuskyHacks](https://github.com/HuskyHacks) and [mtaggart](https://github.com/mttaggart), this project is heavily influenced by [Blue Jupyter](https://github.com/mttaggart/blue-jupyter)
