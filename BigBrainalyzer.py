@@ -23,13 +23,6 @@ def get_input_args():
 
     return parser.parse_args()
 
-def starts_with_mz(filename):
-    try:
-        with open(filename, 'rb') as f:
-            return f.read(2) == 'MZ'
-    except:
-        return False
-
 
 class KeyRot:
     def __init__(self, arr):
@@ -94,8 +87,7 @@ if __name__ == "__main__":
         results_dir = file.replace(".", "-") + DATE
         os.system("mkdir " + results_dir)
         
-        if starts_with_mz(sample_path):
-            write_pe_structure(sample_path, results_dir)
+        write_pe_structure(sample_path, results_dir)
 
         hashes(sample_path, f"{results_dir}\\hashes.txt")
         VTChecker(f"{results_dir}\\hashes.txt", f"{results_dir}\\vt_out.txt", keys, {"HASH"}).drive()
